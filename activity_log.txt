@@ -1362,3 +1362,4 @@
 [2024-03-11T22:14:34] Issue: Resolved HTML rendering bug
 [2024-03-16T22:13:25] Issue: Resolved HTML rendering bug
 [2024-03-16T22:56:14] Contribution: Solving Python backend issues
+[2024-03-16T23:17:35] Docs: Updated README documentation for better clarity
