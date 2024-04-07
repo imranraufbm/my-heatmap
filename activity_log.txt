@@ -1386,3 +1386,4 @@
 [2024-04-06T01:53:39] Update: Refined HTML/Python commit weights
 [2024-04-06T23:04:10] Bug: Fixed Python memory leak in generation loop
 [2024-04-07T02:38:40] Test: Added Python unit tests for date distribution
+[2024-04-07T02:54:45] Docs: Updated README documentation for better clarity
