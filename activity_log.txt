@@ -1304,3 +1304,4 @@
 [2024-05-14T03:42:59] Issue: Resolved HTML rendering bug
 [2024-05-23T01:31:03] Chore: Updated README dependencies and config
 [2024-05-24T04:41:24] Test: Added Python unit tests for date distribution
+[2024-05-25T00:31:25] Docs: Updated README documentation for better clarity
