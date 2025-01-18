@@ -87,3 +87,4 @@
 [2025-01-18T18:44:54] Chore: Updated dependencies and configuration
 [2025-01-18T19:24:32] Chore: Updated dependencies and configuration
 [2025-01-18T19:39:33] Update: Refined commit intensity weights
+[2025-01-18T19:40:09] Docs: Updated API documentation for better clarity
