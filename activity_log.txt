@@ -113,3 +113,4 @@
 [2025-01-23T19:05:34] Feature: Added new authentication layer
 [2025-01-23T22:10:17] Helping: Answered community questions in README
 [2025-01-23T23:19:36] Style: Improved terminal output formatting
+[2025-01-24T15:08:42] Fix: Handled edge case for leap year date calculation
