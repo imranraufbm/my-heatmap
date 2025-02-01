@@ -157,3 +157,4 @@
 [2025-02-01T19:05:24] Chore: Updated dependencies and configuration
 [2025-02-01T19:46:20] Update: Refined commit intensity weights
 [2025-02-01T19:59:23] Style: Improved terminal output formatting
+[2025-02-01T21:37:25] Docs: Updated API documentation for better clarity
