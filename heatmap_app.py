@@ -6,6 +6,11 @@ import random
 from datetime import datetime, timedelta
 from PIL import Image
 
+try:
+    import config
+except ImportError:
+    config = None
+
 # -------------------------------------------------------
 # Utility
 # -------------------------------------------------------
@@ -142,16 +147,32 @@ def preview_heatmap(commit_data):
 # -------------------------------------------------------
 
 def main():
+    parser = argparse.ArgumentParser(description="GitHub Heatmap Designer")
+    parser.add_argument("--start-date", type=str, default="2025-01-01", help="Start date (YYYY-MM-DD)")
+    parser.add_argument("--end-date", type=str, default="2025-07-17", help="End date (YYYY-MM-DD)")
+    parser.add_argument("--commits", type=int, default=1000, help="Total target commits")
+    parser.add_argument("--username", type=str, help="GitHub Username (overrides config.py)")
+    parser.add_argument("--repo", type=str, help="GitHub Repository Name (overrides config.py)")
+    parser.add_argument("--branch", type=str, default="main", help="Git Branch (default: main)")
+    
+    args = parser.parse_args()
+
+    # Determine configuration values
+    username = args.username or (getattr(config, 'GITHUB_USERNAME', 'username') if config else 'username')
+    repo = args.repo or (getattr(config, 'REPO_NAME', 'repo') if config else 'repo')
+    start_date = args.start_date
+    end_date = args.end_date
+    total_commits = args.commits
+    branch = args.branch
+
     print("\n==============================")
     print("   GitHub Heatmap Designer")
     print("==============================")
-    print("Target: 2025-01-01 to 2025-07-17")
-    print("Total Commits: 1000")
+    print(f"Target: {start_date} to {end_date}")
+    print(f"Total Commits: {total_commits}")
+    print(f"User/Repo: {username}/{repo}")
 
-    start_date = "2025-01-01"
-    end_date = "2025-07-17"
-    
-    commit_data = generate_custom_range_pattern(start_date, end_date, 1000)
+    commit_data = generate_custom_range_pattern(start_date, end_date, total_commits)
     
     if not commit_data:
         print("No activity generated.")
@@ -180,8 +201,9 @@ def main():
 
     print(f"\n\nAll {total} commits created successfully.")
     print("\nTo update your GitHub profile (REPLACING current history):")
-    print("  git remote add origin https://github.com/imranraufbm/my-heatmap.git")
-    print("  git push -u origin master --force")
+    print("WARNING: This will overwrite all existing history in the remote repository. Use with extreme caution.")
+    print(f"  git remote add origin https://github.com/{username}/{repo}.git")
+    print(f"  git push -u origin {branch} --force")
 
 if __name__ == "__main__":
     try:
