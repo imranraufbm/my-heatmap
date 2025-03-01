@@ -20,29 +20,34 @@ def run(cmd, env=None):
     subprocess.run(cmd, shell=True, check=True, env=env, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 COMMIT_MESSAGES = [
-    "Fix: Resolved issue with data synchronization",
-    "Feature: Added new authentication layer",
-    "Docs: Updated API documentation for better clarity",
-    "Refactor: Optimized heatmap rendering engine",
-    "Bug: Fixed memory leak in commit generation loop",
-    "Style: Improved terminal output formatting",
-    "Test: Added unit tests for date distribution logic",
-    "Chore: Updated dependencies and configuration",
-    "Fix: Handled edge case for leap year date calculation",
-    "Feature: Implemented night and weekend bias for commits",
-    "Helping: Answered community questions in README",
-    "Issue: Tracked and resolved performance bottleneck",
-    "Task: Implemented custom date range generator",
-    "Update: Refined commit intensity weights"
+    "Fix: Resolved Python data synchronization issue",
+    "Feature: Added HTML authentication layer",
+    "Docs: Updated README documentation for better clarity",
+    "Refactor: Optimized HTML/CSS heatmap rendering",
+    "Bug: Fixed Python memory leak in generation loop",
+    "Style: Improved HTML terminal output formatting",
+    "Test: Added Python unit tests for date distribution",
+    "Chore: Updated README dependencies and config",
+    "Issue: Resolved HTML rendering bug",
+    "Contribution: Private contribution to core engine",
+    "Contribution: Solving Python backend issues",
+    "Issue: Solved README formatting in March-April",
+    "Private: Contribution to private project module",
+    "Task: Implemented Python custom range generator",
+    "Update: Refined HTML/Python commit weights"
 ]
 
-def generate_custom_range_pattern(start_date, end_date, total_target=1000):
+def generate_custom_range_pattern(start_date, end_date, total_target=1000, night_only=False):
     """
-    Generates 1000 commits from start_date to end_date.
+    Generates commits from start_date to end_date.
     Favors nights (mostly) and weekends.
+    If night_only is True, uses the 22:00 - 05:00 window.
     """
     print(f"\nGenerating {total_target} commits from {start_date} to {end_date}...")
-    print("Bias: Nights and Weekends\n")
+    if night_only:
+        print("Bias: Late Nights (22:00 - 05:00)\n")
+    else:
+        print("Bias: Nights and Weekends\n")
     
     start_dt = datetime.strptime(start_date, "%Y-%m-%d")
     end_dt = datetime.strptime(end_date, "%Y-%m-%d")
@@ -76,13 +81,19 @@ def generate_custom_range_pattern(start_date, end_date, total_target=1000):
         num_commits = commits_per_day[i]
         
         for _ in range(num_commits):
-            # Hour distribution: Mostly nights (after 18:00) and some day
-            # 70% chance of night (18:00 - 23:59)
-            # 30% chance of day (09:00 - 17:59)
-            if random.random() < 0.7:
-                hour = random.randint(18, 23)
+            if night_only:
+                # Late night range: 22:00 to 05:00
+                # Split between 22-23 and 0-5
+                if random.random() < 0.4: # 40% chance of 22-23
+                    hour = random.randint(22, 23)
+                else: # 60% chance of 0-5
+                    hour = random.randint(0, 5)
             else:
-                hour = random.randint(9, 17)
+                # Default distribution: Mostly nights (after 18:00) and some day
+                if random.random() < 0.7:
+                    hour = random.randint(18, 23)
+                else:
+                    hour = random.randint(9, 17)
                 
             minute = random.randint(0, 59)
             second = random.randint(0, 59)
@@ -154,6 +165,7 @@ def main():
     parser.add_argument("--username", type=str, help="GitHub Username (overrides config.py)")
     parser.add_argument("--repo", type=str, help="GitHub Repository Name (overrides config.py)")
     parser.add_argument("--branch", type=str, default="main", help="Git Branch (default: main)")
+    parser.add_argument("--night-only", action="store_true", help="Only generate commits between 22:00 and 05:00")
     
     args = parser.parse_args()
 
@@ -164,6 +176,7 @@ def main():
     end_date = args.end_date
     total_commits = args.commits
     branch = args.branch
+    night_only = args.night_only
 
     print("\n==============================")
     print("   GitHub Heatmap Designer")
@@ -171,8 +184,10 @@ def main():
     print(f"Target: {start_date} to {end_date}")
     print(f"Total Commits: {total_commits}")
     print(f"User/Repo: {username}/{repo}")
+    if night_only:
+        print("Timing: Late Night (22:00 - 05:00)")
 
-    commit_data = generate_custom_range_pattern(start_date, end_date, total_commits)
+    commit_data = generate_custom_range_pattern(start_date, end_date, total_commits, night_only=night_only)
     
     if not commit_data:
         print("No activity generated.")
