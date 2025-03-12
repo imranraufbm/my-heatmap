@@ -1037,3 +1037,4 @@
 [2025-03-09T03:16:32] Contribution: Solving Python backend issues
 [2025-03-10T02:33:36] Docs: Updated README documentation for better clarity
 [2025-03-11T05:24:09] Chore: Updated README dependencies and config
+[2025-03-12T04:48:33] Docs: Updated README documentation for better clarity
