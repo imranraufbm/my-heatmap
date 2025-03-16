@@ -380,3 +380,4 @@
 [2025-03-16T17:12:33] Chore: Updated dependencies and configuration
 [2025-03-16T17:41:15] Feature: Implemented night and weekend bias for commits
 [2025-03-16T18:20:58] Feature: Implemented night and weekend bias for commits
+[2025-03-16T19:19:15] Docs: Updated API documentation for better clarity
