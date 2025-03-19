@@ -1049,3 +1049,4 @@
 [2025-03-17T01:55:53] Issue: Solved README formatting in March-April
 [2025-03-18T22:47:36] Contribution: Private contribution to core engine
 [2025-03-19T23:37:35] Chore: Updated README dependencies and config
+[2025-03-20T00:07:24] Docs: Updated README documentation for better clarity
