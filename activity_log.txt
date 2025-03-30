@@ -1065,3 +1065,4 @@
 [2025-03-29T00:57:00] Update: Refined HTML/Python commit weights
 [2025-03-29T01:10:54] Task: Implemented Python custom range generator
 [2025-03-29T01:54:04] Contribution: Solving Python backend issues
+[2025-03-30T03:30:36] Docs: Updated README documentation for better clarity
