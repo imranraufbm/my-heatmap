@@ -453,3 +453,4 @@
 [2025-03-31T20:15:44] Task: Implemented custom date range generator
 [2025-03-31T22:27:04] Task: Implemented custom date range generator
 [2025-04-01T19:26:29] Feature: Implemented night and weekend bias for commits
+[2025-04-01T20:34:51] Docs: Updated API documentation for better clarity
