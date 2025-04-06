@@ -1182,3 +1182,4 @@
 [2025-04-06T02:41:21] Chore: Updated README dependencies and config
 [2025-04-06T03:16:38] Issue: Solved README formatting in March-April
 [2025-04-06T22:02:26] Issue: Solved README formatting in March-April
+[2025-04-07T00:06:50] Docs: Updated README documentation for better clarity
