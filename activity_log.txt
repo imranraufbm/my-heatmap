@@ -507,3 +507,4 @@
 [2025-04-12T16:00:51] Test: Added unit tests for date distribution logic
 [2025-04-12T16:14:41] Bug: Fixed memory leak in commit generation loop
 [2025-04-12T17:34:29] Test: Added unit tests for date distribution logic
+[2025-04-12T18:57:45] Update: Refined commit intensity weights
