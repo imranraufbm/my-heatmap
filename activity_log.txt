@@ -1196,3 +1196,4 @@
 [2025-04-14T23:16:14] Issue: Solved README formatting in March-April
 [2025-04-15T04:08:54] Contribution: Solving Python backend issues
 [2025-04-16T23:12:04] Docs: Updated README documentation for better clarity
+[2025-04-17T23:02:11] Bug: Fixed Python memory leak in generation loop
