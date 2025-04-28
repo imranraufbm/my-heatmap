@@ -1215,3 +1215,4 @@
 [2025-04-27T02:41:38] Issue: Solved README formatting in March-April
 [2025-04-27T03:18:54] Update: Refined HTML/Python commit weights
 [2025-04-27T03:20:08] Issue: Solved README formatting in March-April
+[2025-04-28T04:10:22] Docs: Updated README documentation for better clarity
