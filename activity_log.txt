@@ -606,3 +606,4 @@
 [2025-05-01T11:24:54] Test: Added unit tests for date distribution logic
 [2025-05-01T13:05:06] Fix: Handled edge case for leap year date calculation
 [2025-05-01T20:12:47] Update: Refined commit intensity weights
+[2025-05-02T12:51:48] Docs: Updated API documentation for better clarity
