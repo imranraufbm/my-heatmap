@@ -1,0 +1,14 @@
+# Ignore configuration files containing tokens
+config.py
+.env
+activity_log.txt
+count.txt
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
