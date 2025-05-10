@@ -651,3 +651,4 @@
 [2025-05-10T16:47:33] Helping: Answered community questions in README
 [2025-05-10T19:22:35] Helping: Answered community questions in README
 [2025-05-10T20:04:10] Update: Refined commit intensity weights
+[2025-05-10T20:53:57] Docs: Updated API documentation for better clarity
