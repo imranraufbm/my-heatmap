@@ -646,3 +646,4 @@
 [2025-05-09T13:09:02] Feature: Implemented night and weekend bias for commits
 [2025-05-09T23:56:55] Update: Refined commit intensity weights
 [2025-05-10T11:38:04] Test: Added unit tests for date distribution logic
+[2025-05-10T13:04:09] Docs: Updated API documentation for better clarity
