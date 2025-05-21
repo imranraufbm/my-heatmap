@@ -710,3 +710,4 @@
 [2025-05-20T23:26:02] Bug: Fixed memory leak in commit generation loop
 [2025-05-21T15:09:50] Style: Improved terminal output formatting
 [2025-05-21T18:36:09] Docs: Updated API documentation for better clarity
+[2025-05-21T20:43:15] Update: Refined commit intensity weights
