@@ -719,3 +719,4 @@
 [2025-05-23T20:10:41] Helping: Answered community questions in README
 [2025-05-24T09:59:59] Helping: Answered community questions in README
 [2025-05-24T12:04:09] Fix: Handled edge case for leap year date calculation
+[2025-05-24T12:43:36] Docs: Updated API documentation for better clarity
