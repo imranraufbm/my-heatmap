@@ -899,3 +899,4 @@
 [2025-06-28T11:11:00] Style: Improved terminal output formatting
 [2025-06-28T12:12:30] Refactor: Optimized heatmap rendering engine
 [2025-06-28T12:54:09] Refactor: Optimized heatmap rendering engine
+[2025-06-28T14:45:56] Update: Refined commit intensity weights
